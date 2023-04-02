@@ -3,11 +3,10 @@ const btn = document.getElementById("btn")
 const color = document.querySelector(".color")
 
 btn.addEventListener("click", function () {
-  let hexCode = `
-    #${hex[getRandomNumber()]}${hex[getRandomNumber()]}${
-    hex[getRandomNumber()]
-  }${hex[getRandomNumber()]}${hex[getRandomNumber()]}${hex[getRandomNumber()]}
-  `
+  let hexCode = "#"
+  for (let i = 0; i < 6; i++) {
+    hexCode += hex[getRandomNumber()]
+  }
   document.body.style.backgroundColor = hexCode
   color.textContent = hexCode
 })
