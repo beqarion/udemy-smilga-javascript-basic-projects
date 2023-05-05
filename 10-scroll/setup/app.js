@@ -16,7 +16,6 @@ navToggle.addEventListener("click", function () {
 
   const containerHeight = linksContainer.getBoundingClientRect().height
   const linksHeight = links.getBoundingClientRect().height
-  console.log(linksHeight)
   if (containerHeight == 0) {
     linksContainer.style.height = `${linksHeight}px`
   } else {
@@ -33,7 +32,6 @@ window.addEventListener("scroll", function () {
 
   if (scrollHeight > navbarHeight) {
     navbar.classList.add("fixed-nav")
-    console.log(navbar)
   } else {
     navbar.classList.remove("fixed-nav")
   }
@@ -54,7 +52,18 @@ scrollLinks.forEach(function (link) {
     // const id = e.currentTarget.getAttribute("href").split("#")[1]
     const id = e.currentTarget.getAttribute("href").slice(1)
     const element = document.getElementById(id)
-    let position = element.offsetTop
+    // calculate heights
+    const navHeight = navbar.getBoundingClientRect().height
+    const containerHeight = linksContainer.getBoundingClientRect().height
+    const fixedNav = navbar.classList.contains("fixed-nav")
+    let position = element.offsetTop - navHeight
+
+    if (!fixedNav) {
+      position -= navHeight
+    }
+    if (navHeight > 82) {
+      position = position + containerHeight
+    }
     window.scrollTo({
       left: 0,
       top: position,
