@@ -71,4 +71,46 @@ const menu = [
     img: "./images/item-9.jpeg",
     desc: `skateboard fam synth authentic semiotics. Live-edge lyft af, edison bulb yuccie crucifix microdosing.`,
   },
-];
+]
+
+const sectionCenter = document.querySelector(".section-center")
+const filterBtns = document.querySelectorAll(".filter-btn")
+
+// load items
+window.addEventListener("DOMContentLoaded", function () {
+  displayMenuItems(menu)
+})
+// filter
+filterBtns.forEach((btn) => {
+  btn.addEventListener("click", function (e) {
+    const category = e.currentTarget.dataset.id
+    if(category === 'all'){
+      displayMenuItems(menu)
+      return
+    }
+    const menuCategory = menu.filter(item=>{
+      return item.category === category
+    })
+    displayMenuItems(menuCategory)
+  })
+})
+
+function displayMenuItems(menuItems) {
+  let displayMenu = menuItems.map(function (item) {
+    return `
+    <article class="menu-item">
+        <img src="${item.img}" alt="${item.title}" class="photo">
+        <div class="item-info">
+          <header>
+            <h4>${item.title}</h4>
+            <h4 class="price">${item.price}</h4>
+          </header>
+          <p class="item-text">
+          ${item.desc}
+          </p>
+        </div>
+      </article>`
+  })
+  displayMenu = displayMenu.join("\n")
+  sectionCenter.innerHTML = displayMenu
+}
