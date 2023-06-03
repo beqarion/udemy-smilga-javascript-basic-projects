@@ -216,6 +216,7 @@ Slider
   height: 6rem;
   margin: 0 auto;
   margin-bottom: 1rem;
+  object-fit: cover;
 }
 .slide:nth-child(1) h1 {
   position: absolute;
