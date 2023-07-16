@@ -2,19 +2,72 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      http-equiv="X-UA-Compatible"
+      content="IE=edge"
+    />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
     <title>Filters Starter</title>
-    <link rel="stylesheet" href="./styles.css" />
+    <link
+      rel="stylesheet"
+      href="./styles.css"
+    />
   </head>
   <body>
     <!-- products -->
     <section class="products">
       <!-- filters -->
-      <div class="filters-container"></div>
+      <div class="filters-container">
+        <!-- search -->
+        <form class="input-form">
+          <input
+            type="text"
+            class="search-input"
+            placeholder="search..."
+          />
+        </form>
+        <!-- categories -->
+        <h5>company</h5>
+        <article class="companies">
+          <button
+            class="company-btn"
+            data-id="all"
+          >
+            all
+          </button>
+          <button
+            class="company-btn"
+            data-id="ikea"
+          >
+            ikea
+          </button>
+          <button
+            class="company-btn"
+            data-id="marcos"
+          >
+            marcos
+          </button>
+        </article>
+      </div>
       <!-- products -->
-      <div class="products-container"></div>
+      <div class="products-container">
+        <!-- single product -->
+        <article class="product">
+          <img
+            src="https://course-api.com/images/store/product-1.jpeg"
+            class="product-img img"
+          />
+          <footer>
+            <h5 class="product-name">high-bench bench</h5>
+            <span class="product-price">$9.99</span>
+          </footer>
+        </article>
+      </div>
     </section>
+    <script src="./products.js"></script>
     <script src="./app.js"></script>
   </body>
 </html>
