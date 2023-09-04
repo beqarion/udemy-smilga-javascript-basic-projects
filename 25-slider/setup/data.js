@@ -23,4 +23,10 @@ export const people = [
     job: "designer",
     text: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem quoeius recusandae officia voluptas sint deserunt dicta nihil nam omnis?`,
   },
+  {
+    img: "https://images2.imgbox.com/2e/6e/JAMvTZ56_o.jpeg",
+    name: "emma doe",
+    job: "designer",
+    text: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem quoeius recusandae officia voluptas sint deserunt dicta nihil nam omnis?`,
+  },
 ]

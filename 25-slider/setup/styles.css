@@ -250,7 +250,7 @@ h4 {
   display: flex;
   position: relative;
   height: 450px;
-  /* overflow: hidden; */
+  overflow: hidden;
 }
 .slide {
   position: absolute;
@@ -258,11 +258,12 @@ h4 {
   left: 0;
   width: 100%;
   height: 100%;
-  transition: all 0.3 ease-in-out;
+  transition: all 0.3s ease-in-out;
+  opacity: 0;
 }
 
 .slide.next {
-  opacity: 1;
+  opacity: 0;
   transform: translateX(100%);
 }
 .slide.active {
@@ -270,6 +271,6 @@ h4 {
   transform: translateX(0);
 }
 .slide.last {
-  opacity: 1;
+  opacity: 0;
   transform: translateX(-100%);
 }

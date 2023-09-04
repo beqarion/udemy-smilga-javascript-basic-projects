@@ -33,11 +33,30 @@ container.innerHTML = people
 const startSlider = (type) => {
   const active = document.querySelector(".active")
   const last = document.querySelector(".last")
+  let next = active.nextElementSibling
+  if (!next) {
+    next = container.firstElementChild
+  }
+  active.classList.remove("active")
+  last.classList.remove("last")
+  next.classList.remove("next")
+
+  if (type === "prev") {
+    active.classList.add("next")
+    last.classList.add("active")
+    next.classList.add("last")
+
+    return
+  }
+
+  active.classList.add("last")
+  last.classList.add("next")
+  next.classList.add("active")
 }
 
 nextBtn.addEventListener("click", () => {
   startSlider()
 })
 prevBtn.addEventListener("click", () => {
-  startSlider()
+  startSlider("prev")
 })
