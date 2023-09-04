@@ -2,7 +2,10 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
     <title>ES6 Slider Setup</title>
     <!-- font-awesome -->
     <link
@@ -11,10 +14,44 @@
     />
 
     <!-- stylesheet -->
-    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="styles.css"
+    />
   </head>
   <body>
-    <h2>slider project</h2>
-    <script type="module" src="app.js"></script>
+    <section class="slider">
+      <div class="reviews">
+        <h2><span>/</span>reviews</h2>
+        <div class="slide-container">
+          <article class="slide">
+            <img
+              class="img"
+              src="https://images2.imgbox.com/56/88/oJvFN3l5_o.jpeg"
+              alt=""
+            />
+            <h4>peter doe</h4>
+            <p class="title">product designer</p>
+            <p class="text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Distinctio accusantium voluptate nostrum accusamus repellendus
+              mollitia soluta inventore placeat possimus voluptas?
+            </p>
+            <div class="quote-icon"><i class="fas fa-quote-right"></i></div>
+          </article>
+        </div>
+      </div>
+      <!-- prev next btns -->
+      <button class="btn prev-btn">
+        <i class="fas fa-chevron-left"></i>
+      </button>
+      <button class="btn next-btn">
+        <i class="fas fa-chevron-right"></i>
+      </button>
+    </section>
+    <script
+      type="module"
+      src="app.js"
+    ></script>
   </body>
 </html>
