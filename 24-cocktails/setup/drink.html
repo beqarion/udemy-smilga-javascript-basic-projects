@@ -2,7 +2,10 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
     <title>Single Cocktail</title>
     <!-- font-awesome -->
     <link
@@ -10,10 +13,39 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
     />
     <!-- css -->
-    <link rel="stylesheet" href="./styles.css" />
+    <link
+      rel="stylesheet"
+      href="./styles.css"
+    />
   </head>
   <body>
-    <h1>single drink</h1>
-    <script type="module" src="./singleDrink.js"></script>
+    <section class="loading">
+      <img
+        src="./loading.gif"
+        alt="loading gif"
+      />
+    </section>
+    <section class="single-drink">
+      <img
+        src="./cocktail.jpg"
+        class="drink-img"
+      />
+      <article class="drink-info">
+        <h2 class="drink-name">asf</h2>
+        <p class="drink-desc">
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repudiandae,
+          vero?
+        </p>
+        <ul class="drink-ingredients">
+          <li>1</li>
+          <li>2</li>
+        </ul>
+        <a href="index.html" class="btn">all cocktails</a>
+      </article>
+    </section>
+    <script
+      type="module"
+      src="./singleDrink.js"
+    ></script>
   </body>
 </html>
