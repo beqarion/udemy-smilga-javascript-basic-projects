@@ -1,28 +1,30 @@
-const url = "https://icanhazdadjoke.com/"
+const url = "https://icanhazdadjoke.com/sss"
 
 const btn = document.querySelector(".btn")
 const result = document.querySelector(".result")
 
 btn.addEventListener("click", () => {
-  result.innerHTML = "asfasdf"
+  fetchDadJoke()
 })
 
 const fetchDadJoke = async () => {
-  const response = await fetch(url, {
-    headers: {
-      Accept: "application/json",
-      "User-Agent": "learning app",
-    },
-  })
-  const data = await response.json()
+  result.textContent = "Loading..."
+  try {
+    const response = await fetch(url, {
+      headers: {
+        Accept: "application/json",
+        "User-Agent": "learning app",
+      },
+    })
+    if (!response.ok) {
+      throw new Error("errorasdfasdf")
+    }
+    const data = await response.json()
+    result.textContent = data.joke
+  } catch (error) {
+    console.log(error)
+    result.textContent = "There was and error..."
+  }
 }
 
-fetch(url, {
-  headers: {
-    Accept: "application/json",
-  },
-})
-  .then((response) => response.json())
-  .then((data) => {
-    console.log(data)
-  })
+fetchDadJoke()

@@ -29,7 +29,7 @@ const displayProducts = (list) => {
       return `
     <!-- single product -->
           <a
-            href="product.html"
+            href="product.html?id=${id}"
             class="single-product"
           >
             <img

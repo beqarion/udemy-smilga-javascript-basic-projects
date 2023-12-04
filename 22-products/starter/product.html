@@ -6,10 +6,40 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0"
     />
+    <link
+      rel="stylesheet"
+      href="styles.css"
+    />
     <title>Document</title>
   </head>
   <body>
-    <h1>single product</h1>
-    <a href="index.html">home page</a>
+    <a
+      href="index.html"
+      class="btn home-link"
+      >back home</a
+    >
+    <section class="product">
+      <div class="product-wrapper">
+        <img
+          src="./couch.jpg"
+          alt=""
+          class="img"
+        />
+        <div class="product-info">
+          <h3>title</h3>
+          <h5>company</h5>
+          <span>price</span>
+          <div class="colors">
+            <span class="product-color"></span>
+          </div>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit cum
+            eligendi natus ducimus officia omnis.
+          </p>
+          <button class="btn">add to cart</button>
+        </div>
+      </div>
+    </section>
+    <script src="./product.js"></script>
   </body>
 </html>
