@@ -13,7 +13,12 @@ const init = async () => {
   if (products) {
     // add products to the store
     setupStore(products)
-    console.log(store)
+    const featured = store.filter((product) => {
+      return product.featured
+    })
+    console.log(featured)
+    const featuredCenter = document.querySelector(".featured-center")
+    display(featured, featuredCenter)
   }
 }
 
