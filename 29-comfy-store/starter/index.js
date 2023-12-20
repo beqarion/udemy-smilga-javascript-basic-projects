@@ -16,7 +16,6 @@ const init = async () => {
     const featured = store.filter((product) => {
       return product.featured
     })
-    console.log(featured)
     const featuredCenter = document.querySelector(".featured-center")
     display(featured, featuredCenter)
   }

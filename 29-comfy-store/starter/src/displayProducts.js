@@ -25,6 +25,12 @@ const display = (products, element) => {
     </article>`
     })
     .join("")
+  element.addEventListener("click", function (event) {
+    const parent = event.target.parentElement
+    if (parent.classList.contains("product-cart-btn")) {
+      addToCart(parent.dataset.id)
+    }
+  })
 }
 
 export default display
