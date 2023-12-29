@@ -57,7 +57,7 @@ window.addEventListener('DOMContentLoaded', async function () {
     <h3 class="error">sorry, something went wrong</h3>
     <a href="index.html" class="btn">back home</a>
     </div> 
-     `;
+    `;
     }
   } catch (error) {
     console.log(error);
